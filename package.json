@@ -1,0 +1,24 @@
+{
+  "name": "test-gh-actions",
+  "version": "1.0.0",
+  "description": "a test for github ci cd",
+  "main": "index.js",
+  "scripts": {
+    "lint": "echo 'Linting!'",
+    "build": "echo 'Running a build!'",
+    "test": "echo 'Running unit tests!'"
+  },
+  "dependencies": {
+    "lodash": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crisdev-zero/test-gh-actions.git"
+  },
+  "author": "crisdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crisdev-zero/test-gh-actions/issues"
+  },
+  "homepage": "https://github.com/crisdev-zero/test-gh-actions#readme"
+}
