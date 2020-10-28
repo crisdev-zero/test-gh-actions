@@ -4,10 +4,10 @@
   "version": "1.1.0",
   "author": "MichaelCurrin",
   "license": "MIT",
-  "homepage": "https://michaelcurrin.github.io/react-quickstart/",
+  "homepage": "https://crisdev-zero.github.io/test-gh-actions/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/michaelcurrin/react-quickstart.git"
+    "url": "git+https://github.com/crisdev-zero/test-gh-actions.git"
   },
   "scripts": {
     "start": "react-scripts start",
