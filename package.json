@@ -1,24 +1,45 @@
 {
-  "name": "test-gh-actions",
-  "version": "1.0.0",
-  "description": "a test for github ci cd",
-  "main": "index.js",
-  "scripts": {
-    "lint": "echo 'Linting!'",
-    "build": "echo 'Running a build!'",
-    "test": "echo 'Running unit tests!'"
-  },
-  "dependencies": {
-    "lodash": "*"
-  },
+  "name": "react-quickstart",
+  "description": "Minimal React app template which uses CI to deploy to GitHub Pages",
+  "version": "1.1.0",
+  "author": "crisdev-zero",
+  "license": "MIT",
+  "homepage": "https://crisdev-zero.github.io/test-gh-actions/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/crisdev-zero/test-gh-actions.git"
   },
-  "author": "crisdev",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/crisdev-zero/test-gh-actions/issues"
+  "scripts": {
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "build": "react-scripts build",
+    "preversion": "git fetch --tags && yarn test",
+    "version": "yarn build",
+    "postversion": "git push --follow-tags"
   },
-  "homepage": "https://github.com/crisdev-zero/test-gh-actions#readme"
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

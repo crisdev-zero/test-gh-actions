@@ -1,9 +1,13 @@
-name: Node CI
+name: GH Pages Deploy
 
-on: push
-
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+    
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -13,13 +17,17 @@ jobs:
           persist-credentials: false
 
       - name: Install 🔧
-        run: npm install
-
-      - name: Lint 🧐
-        run: npm run lint
-
-      - name: Build 🏗️
-        run: npm run build
+        run: yarn install
 
       - name: Test 🚨
-        run: npm test
+        run: yarn test
+
+      - name: Build 🏗️
+        run: yarn build
+
+      - name: Deploy to GH Pages 🚀
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
