@@ -2,9 +2,9 @@ name: GH Pages Deploy
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
     
 jobs:
   build-deploy:
@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@master
+        uses: actions/checkout@main
         with:
           persist-credentials: false
 
