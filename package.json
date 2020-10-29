@@ -1,7 +1,7 @@
 {
   "name": "react-quickstart",
   "description": "Minimal React app template which uses CI to deploy to GitHub Pages",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "crisdev-zero",
   "license": "MIT",
   "homepage": "https://crisdev-zero.github.io/test-gh-actions/",
